@@ -85,7 +85,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-white">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-white overflow-x-hidden">
       {/* NAVBAR */}
       <nav
         className={`fixed top-0 w-full z-50 h-20 transition-all duration-500 flex items-center ${
@@ -301,13 +301,13 @@ export default function LandingPage() {
       </section>
 
       {/* TRUST STRIP */}
-      <section className="bg-black py-16 border-y border-border/20 relative">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col xl:flex-row items-center justify-between gap-12 text-center xl:text-left">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white/50 tracking-wider uppercase w-full xl:w-1/3 leading-snug">
+      <section className="bg-black py-12 md:py-16 border-y border-border/20 relative">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-12 text-center xl:text-left">
+            <h2 className="text-xl md:text-3xl font-heading font-bold text-white/50 tracking-wider uppercase w-full xl:w-1/3 leading-snug">
               Trusted Protection.<br/><span className="text-white">Global Standards.</span>
             </h2>
-            <div className="flex flex-wrap justify-center xl:justify-end gap-10 md:gap-16 w-full xl:w-2/3">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center xl:justify-end gap-6 sm:gap-10 md:gap-16 w-full xl:w-2/3">
               <CountUp end={500} label="VIP Assignments" />
               <CountUp end={100} label="Corporate Clients" />
               <CountUp end={1000} label="Secure Transfers" />
@@ -349,10 +349,10 @@ export default function LandingPage() {
                 <h2 className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm font-bold mb-4 flex items-center gap-4">
                   <span className="w-8 h-px bg-[#0D4CFF]"></span> Why Choose Us
                 </h2>
-                <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-8 text-white leading-tight">
+                <h3 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold uppercase mb-6 md:mb-8 text-white leading-tight">
                   Uncompromising Standards.<br/>Absolute Certainty.
                 </h3>
-                <p className="text-white/60 mb-12 text-lg font-light leading-relaxed">
+                <p className="text-white/60 mb-8 md:mb-12 text-base md:text-lg font-light leading-relaxed">
                   We don't just provide security; we architect peace of mind. Our operatives are drawn from elite military and intelligence backgrounds, bringing unparalleled expertise to every detail.
                 </p>
               </motion.div>
@@ -401,7 +401,7 @@ export default function LandingPage() {
               <h2 className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm font-bold mb-4 justify-center flex items-center gap-4">
                 <span className="w-8 h-px bg-[#0D4CFF]"></span> Our Services <span className="w-8 h-px bg-[#0D4CFF]"></span>
               </h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-6 text-white">Elite Security Solutions<br/>Tailored For Every Mission</h3>
+              <h3 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold uppercase mb-6 text-white">Elite Security Solutions<br/>Tailored For Every Mission</h3>
             </motion.div>
           </div>
 
@@ -420,7 +420,7 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="group relative bg-[#07152B]/50 rounded-xl p-10 border border-white/5 overflow-hidden hover:bg-[#07152B] hover:border-[#0D4CFF]/30 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(13,76,255,0.1)] hover:-translate-y-2 backdrop-blur-sm"
+                className="group relative bg-[#07152B]/50 rounded-xl p-6 md:p-10 border border-white/5 overflow-hidden hover:bg-[#07152B] hover:border-[#0D4CFF]/30 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(13,76,255,0.1)] hover:-translate-y-2 backdrop-blur-sm"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#D61F2C] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out" />
                 <srv.icon className="w-12 h-12 text-[#0D4CFF] mb-8 group-hover:scale-110 group-hover:text-white transition-all duration-500" strokeWidth={1.5} />
@@ -442,7 +442,7 @@ export default function LandingPage() {
             <h2 className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm font-bold mb-4 justify-center flex items-center gap-4">
               <span className="w-8 h-px bg-[#0D4CFF]"></span> Operational Protocol
             </h2>
-            <h3 className="text-4xl font-heading font-bold uppercase text-white">Our 4-Step Process</h3>
+            <h3 className="text-2xl sm:text-4xl font-heading font-bold uppercase text-white">Our 4-Step Process</h3>
           </div>
 
           <div className="relative">
@@ -486,8 +486,8 @@ export default function LandingPage() {
       </section>
 
       {/* PAST EVENTS / GALLERY */}
-      <section id="events" className="py-24 bg-black overflow-hidden">
-        <div className="container mx-auto px-6 mb-12 flex flex-col md:flex-row items-end justify-between gap-6">
+      <section id="events" className="py-16 md:py-24 bg-black overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 mb-8 md:mb-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 md:gap-6">
           <div>
             <h2 className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm font-bold mb-4 flex items-center gap-4">
               <span className="w-8 h-px bg-[#0D4CFF]"></span> Field Operations
@@ -504,7 +504,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="w-full pl-6 md:pl-[calc((100vw-1280px)/2+1.5rem)] pb-12">
+        <div className="w-full px-4 sm:px-6 pb-12 overflow-hidden">
           <Swiper
             modules={[Autoplay, Navigation]}
             slidesPerView={1.2}
@@ -604,15 +604,15 @@ export default function LandingPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto p-12 md:p-16 border border-white/10 bg-black/40 backdrop-blur-xl rounded-2xl"
+            className="max-w-3xl mx-auto p-6 sm:p-10 md:p-16 border border-white/10 bg-black/40 backdrop-blur-xl rounded-2xl"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase text-white mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase text-white mb-4 md:mb-6 leading-tight">
               Ready To Secure<br/>Your Next Mission?
             </h2>
-            <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto font-light">
+            <p className="text-sm sm:text-base md:text-lg text-white/70 mb-7 md:mb-10 max-w-xl mx-auto font-light">
               Contact our command center today for a confidential consultation and risk assessment tailored to your unique requirements.
             </p>
-            <Button size="lg" className="h-16 px-10 font-heading uppercase tracking-[0.2em] text-lg bg-[#0D4CFF] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(13,76,255,0.5)] transition-all relative group overflow-hidden">
+            <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 font-heading uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sm sm:text-base md:text-lg bg-[#0D4CFF] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(13,76,255,0.5)] transition-all relative group overflow-hidden">
               <span className="relative z-10">Request Consultation</span>
               <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
             </Button>
@@ -621,12 +621,12 @@ export default function LandingPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#040B18] pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
+      <footer className="bg-[#040B18] pt-12 md:pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none w-[800px] h-[400px]" 
              style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #ffffff 2px, transparent 2px)', backgroundSize: '40px 40px' }} />
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
             <div className="lg:col-span-1">
               <img src="/images/logo.png" alt="Gallant Protocol" className="h-16 w-auto mb-6" />
               <p className="text-white/50 text-sm leading-relaxed mb-6 font-light max-w-xs">
@@ -682,7 +682,7 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center gap-3 text-white/50 text-sm">
                   <Mail size={18} className="text-[#0D4CFF] shrink-0" />
-                  <span>operations@gallantprotocol.com</span>
+                  <span className="break-all">operations@gallantprotocol.com</span>
                 </li>
               </ul>
             </div>
