@@ -1,0 +1,7 @@
+{
+  "buildCommand": "pnpm install && pnpm --filter @workspace/gallant-protocol run build",
+  "outputDirectory": "artifacts/gallant-protocol/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
