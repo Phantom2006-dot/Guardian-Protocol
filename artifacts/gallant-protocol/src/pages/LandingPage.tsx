@@ -94,7 +94,7 @@ export default function LandingPage() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center cursor-pointer" onClick={() => scrollTo("home")}>
-            <img src="/images/logo.png" alt="Gallant Protocol" className="h-12 w-auto object-contain" />
+            <img src="/images/logo.png" alt="Gallant Protocol" className="h-16 w-auto object-contain" />
           </div>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -166,7 +166,7 @@ export default function LandingPage() {
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <section id="home" className="relative h-screen w-full flex items-center justify-start overflow-hidden bg-[#07152B]">
+      <section id="home" className="relative h-screen w-full flex items-start justify-start overflow-hidden bg-[#07152B]">
         <div className="absolute inset-0 z-0">
           <Swiper
             modules={[Autoplay, EffectFade, Pagination, Navigation]}
@@ -192,19 +192,19 @@ export default function LandingPage() {
           </Swiper>
         </div>
 
-        <div className="container relative z-10 mx-auto px-6 pt-20">
+        <div className="container relative z-10 mx-auto px-6 flex flex-col justify-center h-full pt-24 pb-16">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-6 flex items-center gap-4"
+              className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm font-bold mb-5 flex items-center gap-4"
             >
               <span className="w-12 h-px bg-[#0D4CFF]"></span>
               Executive Protection & Security Excellence
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-heading font-bold uppercase leading-[0.95] mb-8 text-white tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.95] mb-6 text-white tracking-tight">
               <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}>PROTECTING PEOPLE.</motion.div>
               <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.8, ease: "easeOut" }} className="text-white/60">PRESERVING TRUST.</motion.div>
               <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} className="text-[#0D4CFF]">DELIVERING EXCELLENCE.</motion.div>
@@ -214,7 +214,7 @@ export default function LandingPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl leading-relaxed font-light"
+              className="text-base md:text-lg text-white/70 mb-8 max-w-2xl leading-relaxed font-light"
             >
               Elite security solutions for diplomats, executives, and high-value assets. 
               We provide unmatched discretion, strategic protocol, and operational supremacy across the globe.
@@ -226,10 +226,10 @@ export default function LandingPage() {
               transition={{ delay: 1 }}
               className="flex flex-wrap gap-4"
             >
-              <Button size="lg" className="h-14 px-8 font-heading uppercase tracking-widest text-lg bg-[#0D4CFF] hover:bg-[#0D4CFF]/90 text-white border-none shadow-[0_0_20px_rgba(13,76,255,0.4)] hover:shadow-[0_0_30px_rgba(13,76,255,0.6)] transition-all" onClick={() => scrollTo("contact")}>
+              <Button size="lg" className="h-13 px-8 font-heading uppercase tracking-widest text-base bg-[#0D4CFF] hover:bg-[#0D4CFF]/90 text-white border-none shadow-[0_0_20px_rgba(13,76,255,0.4)] hover:shadow-[0_0_30px_rgba(13,76,255,0.6)] transition-all" onClick={() => scrollTo("contact")}>
                 Get Consultation
               </Button>
-              <Button variant="outline" size="lg" className="h-14 px-8 font-heading uppercase tracking-widest text-lg bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 hover:text-white transition-all" onClick={() => scrollTo("services")}>
+              <Button variant="outline" size="lg" className="h-13 px-8 font-heading uppercase tracking-widest text-base bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 hover:text-white transition-all" onClick={() => scrollTo("services")}>
                 Explore Services
               </Button>
             </motion.div>
@@ -254,7 +254,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 hidden xl:block"
+          className="absolute right-0 top-[58%] -translate-y-1/2 z-20 hidden xl:block"
         >
           <div className="bg-[#07152B]/40 backdrop-blur-xl p-8 rounded-l-2xl border-y border-l border-[#0D4CFF]/30 shadow-[-10px_0_40px_rgba(13,76,255,0.15)] flex flex-col gap-8 w-64">
             <div>
@@ -281,7 +281,7 @@ export default function LandingPage() {
       </section>
 
       {/* TRUST STRIP */}
-      <section className="bg-black py-16 border-y border-border/20 relative z-20">
+      <section className="bg-black py-16 border-y border-border/20 relative">
         <div className="container mx-auto px-6">
           <div className="flex flex-col xl:flex-row items-center justify-between gap-12 text-center xl:text-left">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-white/50 tracking-wider uppercase w-full xl:w-1/3 leading-snug">
@@ -314,9 +314,9 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-[#07152B]/20 z-10 mix-blend-overlay"></div>
                 <img src="/images/events/IMG-20260525-WA0067.jpg" alt="Security Operation" className="object-cover w-full h-full" />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-[#07152B] p-8 border border-border/30 rounded-xl shadow-2xl hidden md:block">
-                <img src="/images/logo.png" alt="Gallant" className="h-16 opacity-80" />
-                <div className="mt-4 text-white font-heading tracking-widest uppercase text-sm">Institution of Trust</div>
+              <div className="absolute -bottom-8 -right-8 bg-[#07152B] p-6 border border-border/30 rounded-xl shadow-2xl hidden md:flex md:flex-col md:items-center md:min-w-[180px]">
+                <img src="/images/logo.png" alt="Gallant" className="h-28 w-auto object-contain opacity-90" />
+                <div className="mt-3 text-white font-heading tracking-widest uppercase text-xs text-center">Institution of Trust</div>
               </div>
             </motion.div>
 
