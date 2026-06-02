@@ -696,7 +696,7 @@ export default function LandingPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-white/50 text-sm">
                   <MapPin size={18} className="text-[#0D4CFF] shrink-0 mt-0.5" />
-                  <span>Gallant Tower, Wuse II<br/>Abuja, Nigeria</span>
+                  <span>Gallant Tower, Wuse I<br/>Abuja, Nigeria</span>
                 </li>
                 <li className="flex items-center gap-3 text-white/50 text-sm">
                   <Phone size={18} className="text-[#0D4CFF] shrink-0" />
