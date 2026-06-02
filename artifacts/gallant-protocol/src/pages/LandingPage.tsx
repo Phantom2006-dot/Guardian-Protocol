@@ -519,14 +519,14 @@ export default function LandingPage() {
             className="events-swiper"
           >
             {[
-              { img: "WA0068", title: "Presidential Escort", loc: "Nairobi, Kenya" },
-              { img: "WA0069", title: "Corporate Summit", loc: "Mombasa, Kenya" },
-              { img: "WA0070", title: "Diplomatic Transfer", loc: "JKIA Airport" },
-              { img: "WA0071", title: "Executive Retreat", loc: "Naivasha, Kenya" },
+              { img: "WA0068", title: "Presidential Escort", loc: "Abuja, Nigeria" },
+              { img: "WA0069", title: "Corporate Summit", loc: "Lagos, Nigeria" },
+              { img: "WA0070", title: "Diplomatic Transfer", loc: "Nnamdi Azikiwe Airport" },
+              { img: "WA0071", title: "Executive Retreat", loc: "Port Harcourt, Nigeria" },
               { img: "WA0072", title: "Gala Security", loc: "International Event" },
-              { img: "WA0073", title: "VIP Convoy", loc: "Nairobi CBD" },
+              { img: "WA0073", title: "VIP Convoy", loc: "Abuja CBD" },
               { img: "WA0074", title: "High-Asset Protection", loc: "Classified" },
-              { img: "WA0075", title: "Asset Transfer", loc: "Nairobi, Kenya" }
+              { img: "WA0075", title: "Asset Transfer", loc: "Abuja, Nigeria" }
             ].map((event, i) => (
               <SwiperSlide key={i} className="group cursor-pointer">
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
@@ -674,11 +674,11 @@ export default function LandingPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-white/50 text-sm">
                   <MapPin size={18} className="text-[#0D4CFF] shrink-0 mt-0.5" />
-                  <span>Gallant Tower, Westlands<br/>Nairobi, Kenya</span>
+                  <span>Gallant Tower, Wuse II<br/>Abuja, Nigeria</span>
                 </li>
                 <li className="flex items-center gap-3 text-white/50 text-sm">
                   <Phone size={18} className="text-[#0D4CFF] shrink-0" />
-                  <span>+254 700 000 000</span>
+                  <span>+234 800 000 0000</span>
                 </li>
                 <li className="flex items-center gap-3 text-white/50 text-sm">
                   <Mail size={18} className="text-[#0D4CFF] shrink-0" />
