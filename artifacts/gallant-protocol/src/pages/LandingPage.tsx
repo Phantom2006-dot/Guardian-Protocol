@@ -88,13 +88,13 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-white">
       {/* NAVBAR */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          isScrolled ? "bg-[#07152B]/90 backdrop-blur-md border-b border-border/30 py-4 shadow-lg" : "bg-transparent py-6"
+        className={`fixed top-0 w-full z-50 h-20 transition-all duration-500 flex items-center ${
+          isScrolled ? "bg-[#07152B]/95 backdrop-blur-md border-b border-border/30 shadow-lg" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 w-full flex items-center justify-between">
           <div className="flex items-center cursor-pointer" onClick={() => scrollTo("home")}>
-            <img src="/images/logo.png" alt="Gallant Protocol" className="h-16 w-auto object-contain" />
+            <img src="/images/logo.png" alt="Gallant Protocol" className="h-12 md:h-14 w-auto object-contain" />
           </div>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -166,7 +166,8 @@ export default function LandingPage() {
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <section id="home" className="relative h-screen w-full flex items-start justify-start overflow-hidden bg-[#07152B]">
+      <section id="home" className="relative h-screen w-full flex flex-col overflow-hidden bg-[#07152B]">
+        {/* Background carousel - fills entire section */}
         <div className="absolute inset-0 z-0">
           <Swiper
             modules={[Autoplay, EffectFade, Pagination, Navigation]}
@@ -184,68 +185,87 @@ export default function LandingPage() {
                     className="absolute inset-0 bg-cover bg-center ken-burns"
                     style={{ backgroundImage: `url(/images/events/IMG-20260525-${img}.jpg)` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#07152B] via-[#07152B]/70 to-transparent" />
-                  <div className="absolute inset-0 bg-[#0D4CFF]/10 mix-blend-overlay" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#07152B] via-[#07152B]/75 to-[#07152B]/30" />
+                  <div className="absolute inset-0 bg-[#07152B]/30" />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
-        <div className="container relative z-10 mx-auto px-6 flex flex-col justify-center h-full pt-24 pb-16">
-          <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-[#0D4CFF] font-heading uppercase tracking-[0.3em] text-sm font-bold mb-5 flex items-center gap-4"
-            >
-              <span className="w-12 h-px bg-[#0D4CFF]"></span>
-              Executive Protection & Security Excellence
-            </motion.div>
+        {/* Spacer that exactly matches navbar height — keeps content below nav on ALL screen sizes */}
+        <div className="h-20 shrink-0" />
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[0.95] mb-6 text-white tracking-tight">
-              <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}>PROTECTING PEOPLE.</motion.div>
-              <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.8, ease: "easeOut" }} className="text-white/60">PRESERVING TRUST.</motion.div>
-              <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} className="text-[#0D4CFF]">DELIVERING EXCELLENCE.</motion.div>
-            </h1>
+        {/* Content area — centers vertically in remaining space */}
+        <div className="flex-1 relative z-10 flex items-center">
+          <div className="container mx-auto px-4 md:px-6 w-full">
+            <div className="max-w-2xl lg:max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-[#0D4CFF] font-heading uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm font-bold mb-4 md:mb-5 flex items-center gap-3"
+              >
+                <span className="w-8 md:w-12 h-px bg-[#0D4CFF] shrink-0"></span>
+                Executive Protection & Security Excellence
+              </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 1 }}
-              className="text-base md:text-lg text-white/70 mb-8 max-w-2xl leading-relaxed font-light"
-            >
-              Elite security solutions for diplomats, executives, and high-value assets. 
-              We provide unmatched discretion, strategic protocol, and operational supremacy across the globe.
-            </motion.p>
+              <h1 className="text-[2.2rem] sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold uppercase leading-[1] mb-5 md:mb-6 text-white tracking-tight">
+                <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}>PROTECTING PEOPLE.</motion.div>
+                <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.8, ease: "easeOut" }} className="text-white/55">PRESERVING TRUST.</motion.div>
+                <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} className="text-[#0D4CFF]">DELIVERING EXCELLENCE.</motion.div>
+              </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Button size="lg" className="h-13 px-8 font-heading uppercase tracking-widest text-base bg-[#0D4CFF] hover:bg-[#0D4CFF]/90 text-white border-none shadow-[0_0_20px_rgba(13,76,255,0.4)] hover:shadow-[0_0_30px_rgba(13,76,255,0.6)] transition-all" onClick={() => scrollTo("contact")}>
-                Get Consultation
-              </Button>
-              <Button variant="outline" size="lg" className="h-13 px-8 font-heading uppercase tracking-widest text-base bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 hover:text-white transition-all" onClick={() => scrollTo("services")}>
-                Explore Services
-              </Button>
-            </motion.div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 1 }}
+                className="text-sm md:text-base lg:text-lg text-white/70 mb-7 md:mb-8 max-w-xl leading-relaxed font-light"
+              >
+                Elite security solutions for diplomats, executives, and high-value assets. 
+                Unmatched discretion, strategic protocol, and operational supremacy across the globe.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="flex flex-col sm:flex-row gap-3 md:gap-4"
+              >
+                <Button
+                  size="lg"
+                  className="h-12 md:h-14 px-6 md:px-8 font-heading uppercase tracking-widest text-sm md:text-base bg-[#0D4CFF] hover:bg-[#0D4CFF]/90 text-white border-none shadow-[0_0_20px_rgba(13,76,255,0.4)] hover:shadow-[0_0_30px_rgba(13,76,255,0.6)] transition-all"
+                  onClick={() => scrollTo("contact")}
+                  data-testid="button-hero-consultation"
+                >
+                  Get Consultation
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="h-12 md:h-14 px-6 md:px-8 font-heading uppercase tracking-widest text-sm md:text-base bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 hover:text-white transition-all"
+                  onClick={() => scrollTo("services")}
+                  data-testid="button-hero-services"
+                >
+                  Explore Services
+                </Button>
+              </motion.div>
+            </div>
           </div>
         </div>
 
-        {/* Custom Navigation & Pagination */}
-        <div className="absolute bottom-10 left-0 right-0 z-20 container mx-auto px-6 flex items-center justify-between">
-          <div className="hero-pagination flex gap-2 w-auto!"></div>
-          <div className="flex gap-4 hidden md:flex">
-            <button className="hero-prev w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#0D4CFF] hover:border-[#0D4CFF] backdrop-blur-sm transition-all">
-              <ArrowRight className="rotate-180" size={20} />
-            </button>
-            <button className="hero-next w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#0D4CFF] hover:border-[#0D4CFF] backdrop-blur-sm transition-all">
-              <ArrowRight size={20} />
-            </button>
+        {/* Bottom pagination & nav arrows */}
+        <div className="relative z-20 pb-6 md:pb-8">
+          <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <div className="hero-pagination flex gap-2"></div>
+            <div className="hidden md:flex gap-3">
+              <button className="hero-prev w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#0D4CFF] hover:border-[#0D4CFF] backdrop-blur-sm transition-all">
+                <ArrowRight className="rotate-180" size={18} />
+              </button>
+              <button className="hero-next w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#0D4CFF] hover:border-[#0D4CFF] backdrop-blur-sm transition-all">
+                <ArrowRight size={18} />
+              </button>
+            </div>
           </div>
         </div>
 
