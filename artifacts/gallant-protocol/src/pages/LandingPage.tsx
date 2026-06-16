@@ -5,14 +5,27 @@ import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import { Menu, X, Shield, Users, Plane, Calendar, MapPin, Search, CheckCircle2, Phone, Mail, Instagram, Twitter, Linkedin, Facebook, Star, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import evtImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(2)_1781568740994.jpeg";
-import evtImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(1)_1781568740995.jpeg";
-import evtImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_1781568740996.jpeg";
-import evtImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(1)_1781568740997.jpeg";
-import evtImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(2)_1781568768260.jpeg";
+import eccImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_(1)_1781568586010.jpeg";
+import eccImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_1781568586011.jpeg";
+import eccImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(4)_1781568586012.jpeg";
+import eccImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(3)_1781568586013.jpeg";
+import eccImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(2)_1781568586014.jpeg";
+import eccImg6 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(1)_1781568586016.jpeg";
+import eccImg7 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_1781568586017.jpeg";
+import eccImg8 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.33_PM_1781568586018.jpeg";
+import eccImg9 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(2)_1781568586019.jpeg";
+import eccImg10 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(1)_1781568586020.jpeg";
+import eccImg11 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_1781568586020.jpeg";
+import epsImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(2)_1781568740994.jpeg";
+import epsImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(1)_1781568740995.jpeg";
+import epsImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_1781568740996.jpeg";
+import epsImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(1)_1781568740997.jpeg";
+import epsImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(2)_1781568768260.jpeg";
 
-const eventImages = [evtImg1, evtImg2, evtImg3, evtImg4, evtImg5];
-const eventLabel = "Escort and Protocol Services";
+const eventSlides: { src: string; label: string }[] = [
+  ...[eccImg1, eccImg2, eccImg3, eccImg4, eccImg5, eccImg6, eccImg7, eccImg8, eccImg9, eccImg10, eccImg11].map(src => ({ src, label: "Event and Crowd Control" })),
+  ...[epsImg1, epsImg2, epsImg3, epsImg4, epsImg5].map(src => ({ src, label: "Escort and Protocol Services" })),
+];
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -527,18 +540,18 @@ export default function LandingPage() {
             autoplay={{ delay: 4000, disableOnInteraction: true, pauseOnMouseEnter: true }}
             className="events-swiper"
           >
-            {eventImages.map((src, i) => (
+            {eventSlides.map((slide, i) => (
               <SwiperSlide key={i} className="group cursor-pointer">
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07152B] via-transparent to-transparent z-10" />
                   <img
-                    src={src}
-                    alt="Event and Crowd Control"
+                    src={slide.src}
+                    alt={slide.label}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{eventLabel}</h4>
+                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{slide.label}</h4>
                     <Button variant="outline" size="sm" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
                     </Button>
