@@ -21,8 +21,28 @@ import epsImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(1)_1781568
 import epsImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_1781568740996.jpeg";
 import epsImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(1)_1781568740997.jpeg";
 import epsImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(2)_1781568768260.jpeg";
+import vcpImg1 from "@assets/3ca5f3e5-e96e-42c0-bdd6-a5693036776b_1781569110198.jpg";
+import vcpImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.03.43_PM_1781569086389.jpeg";
+import vcpImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(1)_1781569086387.jpeg";
+import vcpImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_1781569086388.jpeg";
+import vcpImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(2)_1781569086386.jpeg";
+import vcpImg6 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(3)_1781569086385.jpeg";
+import vcpImg7 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(4)_1781569086384.jpeg";
+import vcpImg8 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(5)_1781569086383.jpeg";
+import vcpImg9 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(6)_1781569086382.jpeg";
+import vcpImg10 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(7)_1781569086381.jpeg";
+import vcpImg11 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.44_PM_1781569086380.jpeg";
+import vcpImg12 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(1)_1781569086378.jpeg";
+import vcpImg13 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_1781569086379.jpeg";
+import vcpImg14 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(2)_1781569086377.jpeg";
+import vcpImg15 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(3)_1781569086374.jpeg";
+import vcpImg16 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(4)_1781569086373.jpeg";
+import vcpImg17 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.46_PM_(1)_1781569086371.jpeg";
+import vcpImg18 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.46_PM_1781569086372.jpeg";
+import vcpImg19 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.46_PM_(2)_1781569086370.jpeg";
 
 const eventSlides: { src: string; label: string }[] = [
+  ...[vcpImg1, vcpImg2, vcpImg3, vcpImg4, vcpImg5, vcpImg6, vcpImg7, vcpImg8, vcpImg9, vcpImg10, vcpImg11, vcpImg12, vcpImg13, vcpImg14, vcpImg15, vcpImg16, vcpImg17, vcpImg18, vcpImg19].map(src => ({ src, label: "VIP Close Protection" })),
   ...[eccImg1, eccImg2, eccImg3, eccImg4, eccImg5, eccImg6, eccImg7, eccImg8, eccImg9, eccImg10, eccImg11].map(src => ({ src, label: "Event and Crowd Control" })),
   ...[epsImg1, epsImg2, epsImg3, epsImg4, epsImg5].map(src => ({ src, label: "Escort and Protocol Services" })),
 ];
