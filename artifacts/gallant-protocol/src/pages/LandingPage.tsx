@@ -5,6 +5,20 @@ import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import { Menu, X, Shield, Users, Plane, Calendar, MapPin, Search, CheckCircle2, Phone, Mail, Instagram, Twitter, Linkedin, Facebook, Star, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import evtImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_(1)_1781568586010.jpeg";
+import evtImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_1781568586011.jpeg";
+import evtImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(4)_1781568586012.jpeg";
+import evtImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(3)_1781568586013.jpeg";
+import evtImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(2)_1781568586014.jpeg";
+import evtImg6 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(1)_1781568586016.jpeg";
+import evtImg7 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_1781568586017.jpeg";
+import evtImg8 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.33_PM_1781568586018.jpeg";
+import evtImg9 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(2)_1781568586019.jpeg";
+import evtImg10 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(1)_1781568586020.jpeg";
+import evtImg11 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_1781568586020.jpeg";
+
+const eventImages = [evtImg1, evtImg2, evtImg3, evtImg4, evtImg5, evtImg6, evtImg7, evtImg8, evtImg9, evtImg10, evtImg11];
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -518,52 +532,18 @@ export default function LandingPage() {
             autoplay={{ delay: 4000, disableOnInteraction: true, pauseOnMouseEnter: true }}
             className="events-swiper"
           >
-            {[
-              { img: "WA0068", title: "Presidential Escort", loc: "Abuja, Nigeria" },
-              { img: "WA0069", title: "Corporate Summit", loc: "Lagos, Nigeria" },
-              { img: "WA0070", title: "Diplomatic Transfer", loc: "Nnamdi Azikiwe Airport" },
-              { img: "WA0071", title: "Executive Retreat", loc: "Port Harcourt, Nigeria" },
-              { img: "WA0072", title: "Gala Security", loc: "International Event" },
-              { img: "WA0073", title: "VIP Convoy", loc: "Abuja CBD" },
-              { img: "WA0074", title: "High-Asset Protection", loc: "Classified" },
-              { img: "WA0075", title: "Asset Transfer", loc: "Abuja, Nigeria" },
-              { img: "WA0076", title: "Close Protection Detail", loc: "Lagos, Nigeria" },
-              { img: "WA0077", title: "Executive Arrival", loc: "Murtala Muhammed Airport" },
-              { img: "WA0078", title: "Diplomatic Security", loc: "Abuja, Nigeria" },
-              { img: "WA0079", title: "Corporate Protection", loc: "Victoria Island, Lagos" },
-              { img: "WA0080", title: "VIP Conference Security", loc: "Abuja, Nigeria" },
-              { img: "WA0081", title: "Secure Motorcade", loc: "Abuja, Nigeria" },
-              { img: "WA0082", title: "Event Perimeter Control", loc: "Lagos, Nigeria" },
-              { img: "WA0083", title: "High-Value Escort", loc: "Port Harcourt, Nigeria" },
-              { img: "WA0084", title: "Night Operations", loc: "Classified" },
-              { img: "WA0085", title: "Summit Security Detail", loc: "Abuja, Nigeria" },
-              { img: "WA0086", title: "VIP Ground Transport", loc: "Kano, Nigeria" },
-              { img: "WA0087", title: "Private Delegation Escort", loc: "Abuja, Nigeria" },
-              { img: "WA0088", title: "Advance Team Deployment", loc: "Lagos, Nigeria" },
-              { img: "WA0089", title: "Secure Asset Movement", loc: "Abuja, Nigeria" },
-              { img: "WA0090", title: "Corporate Gala Coverage", loc: "Eko Hotel, Lagos" },
-              { img: "WA0091", title: "Executive Site Inspection", loc: "Abuja, Nigeria" },
-              { img: "WA0092", title: "Close-Quarter Protection", loc: "Port Harcourt, Nigeria" },
-              { img: "WA0094", title: "Residential Security Ops", loc: "Abuja, Nigeria" },
-              { img: "WA0095", title: "Tactical Team Briefing", loc: "Classified" },
-              { img: "WA0096", title: "VIP Arrival Protocol", loc: "Nnamdi Azikiwe Airport" },
-              { img: "WA0097", title: "Night Escort Operation", loc: "Lagos, Nigeria" },
-              { img: "WA0098", title: "Full Detail Deployment", loc: "Abuja, Nigeria" },
-            ].map((event, i) => (
+            {eventImages.map((src, i) => (
               <SwiperSlide key={i} className="group cursor-pointer">
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07152B] via-transparent to-transparent z-10" />
-                  <img 
-                    src={`/images/events/IMG-20260525-${event.img}.jpg`} 
-                    alt={event.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" 
+                  <img
+                    src={src}
+                    alt="Event and Crowd Control"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex items-center gap-2 text-[#0D4CFF] text-xs font-bold uppercase tracking-widest mb-2">
-                      <MapPin size={14} /> {event.loc}
-                    </div>
-                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{event.title}</h4>
+                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">Event and Crowd Control</h4>
                     <Button variant="outline" size="sm" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
                     </Button>
