@@ -73,6 +73,7 @@ const CountUp = ({ end, duration = 2, label }: { end: number, duration?: number,
       }, 1000 / 60);
       return () => clearInterval(timer);
     }
+    return undefined;
   }, [end, duration, isInView]);
 
   return (
