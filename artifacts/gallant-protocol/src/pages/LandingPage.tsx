@@ -5,19 +5,14 @@ import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import { Menu, X, Shield, Users, Plane, Calendar, MapPin, Search, CheckCircle2, Phone, Mail, Instagram, Twitter, Linkedin, Facebook, Star, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import evtImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_(1)_1781568586010.jpeg";
-import evtImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_1781568586011.jpeg";
-import evtImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(4)_1781568586012.jpeg";
-import evtImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(3)_1781568586013.jpeg";
-import evtImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(2)_1781568586014.jpeg";
-import evtImg6 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(1)_1781568586016.jpeg";
-import evtImg7 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_1781568586017.jpeg";
-import evtImg8 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.33_PM_1781568586018.jpeg";
-import evtImg9 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(2)_1781568586019.jpeg";
-import evtImg10 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(1)_1781568586020.jpeg";
-import evtImg11 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_1781568586020.jpeg";
+import evtImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(2)_1781568740994.jpeg";
+import evtImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(1)_1781568740995.jpeg";
+import evtImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_1781568740996.jpeg";
+import evtImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(1)_1781568740997.jpeg";
+import evtImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(2)_1781568768260.jpeg";
 
-const eventImages = [evtImg1, evtImg2, evtImg3, evtImg4, evtImg5, evtImg6, evtImg7, evtImg8, evtImg9, evtImg10, evtImg11];
+const eventImages = [evtImg1, evtImg2, evtImg3, evtImg4, evtImg5];
+const eventLabel = "Escort and Protocol Services";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -543,7 +538,7 @@ export default function LandingPage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">Event and Crowd Control</h4>
+                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{eventLabel}</h4>
                     <Button variant="outline" size="sm" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
                     </Button>
