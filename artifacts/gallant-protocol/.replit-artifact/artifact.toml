@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Gallant Protocol"
+version = "1.0.0"
+id = "artifacts/gallant-protocol"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22034
+
+[services.development]
+run = "pnpm --filter @workspace/gallant-protocol run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/gallant-protocol", "run", "build" ]
+publicDir = "artifacts/gallant-protocol/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22034"
+BASE_PATH = "/"
