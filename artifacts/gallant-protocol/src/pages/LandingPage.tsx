@@ -645,12 +645,25 @@ export default function LandingPage() {
             <p className="text-sm sm:text-base md:text-lg text-white/70 mb-7 md:mb-10 max-w-xl mx-auto font-light">
               Contact our command center today for a confidential consultation and risk assessment tailored to your unique requirements.
             </p>
-            <a href="mailto:bbface26@gmail.com" className="w-full sm:w-auto inline-block">
-              <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 font-heading uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sm sm:text-base md:text-lg bg-[#0D4CFF] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(13,76,255,0.5)] transition-all relative group overflow-hidden">
-                <span className="relative z-10">Request Consultation</span>
-                <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
-              </Button>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="mailto:bbface26@gmail.com" className="w-full sm:w-auto inline-block">
+                <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 font-heading uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sm sm:text-base md:text-lg bg-[#0D4CFF] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(13,76,255,0.5)] transition-all relative group overflow-hidden">
+                  <Mail size={18} className="relative z-10 mr-2 shrink-0" />
+                  <span className="relative z-10">Email Us</span>
+                  <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                </Button>
+              </a>
+              <a href="https://wa.me/2348024493299?text=Hello%2C%20I%20would%20like%20to%20request%20a%20consultation." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
+                <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 font-heading uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sm sm:text-base md:text-lg bg-[#25D366] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(37,211,102,0.4)] transition-all relative group overflow-hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="relative z-10 mr-2 shrink-0 w-5 h-5">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.855L.057 23.5l5.799-1.519A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.365l-.373-.22-3.44.902.917-3.349-.242-.384A9.937 9.937 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+                  </svg>
+                  <span className="relative z-10">WhatsApp</span>
+                  <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+                </Button>
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
