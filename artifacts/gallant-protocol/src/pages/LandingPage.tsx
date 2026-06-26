@@ -573,7 +573,7 @@ export default function LandingPage() {
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
                     <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{slide.label}</h4>
                     <Button variant="outline" size="sm" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
@@ -645,10 +645,12 @@ export default function LandingPage() {
             <p className="text-sm sm:text-base md:text-lg text-white/70 mb-7 md:mb-10 max-w-xl mx-auto font-light">
               Contact our command center today for a confidential consultation and risk assessment tailored to your unique requirements.
             </p>
-            <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 font-heading uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sm sm:text-base md:text-lg bg-[#0D4CFF] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(13,76,255,0.5)] transition-all relative group overflow-hidden">
-              <span className="relative z-10">Request Consultation</span>
-              <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
-            </Button>
+            <a href="mailto:bbface26@gmail.com" className="w-full sm:w-auto inline-block">
+              <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 font-heading uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sm sm:text-base md:text-lg bg-[#0D4CFF] hover:bg-white hover:text-black text-white border-none shadow-[0_0_30px_rgba(13,76,255,0.5)] transition-all relative group overflow-hidden">
+                <span className="relative z-10">Request Consultation</span>
+                <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out z-0"></div>
+              </Button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -711,11 +713,11 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center gap-3 text-white/50 text-sm">
                   <Phone size={18} className="text-[#0D4CFF] shrink-0" />
-                  <span>+234 800 000 0000</span>
+                  <a href="tel:+2348024493299" className="hover:text-white transition-colors">+234 802 449 3299</a>
                 </li>
                 <li className="flex items-center gap-3 text-white/50 text-sm">
                   <Mail size={18} className="text-[#0D4CFF] shrink-0" />
-                  <span className="break-all">operations@gallantprotocol.com</span>
+                  <a href="mailto:bbface26@gmail.com" className="break-all hover:text-white transition-colors">bbface26@gmail.com</a>
                 </li>
               </ul>
             </div>
