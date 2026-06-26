@@ -573,7 +573,7 @@ export default function LandingPage() {
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                     <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{slide.label}</h4>
                     <Button variant="outline" size="sm" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
