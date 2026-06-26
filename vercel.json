@@ -1,5 +1,0 @@
-{
-  "buildCommand": "pnpm --filter @workspace/gallant-protocol run build",
-  "outputDirectory": "artifacts/gallant-protocol/dist",
-  "installCommand": "pnpm install"
-}

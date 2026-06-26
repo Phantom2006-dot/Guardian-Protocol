@@ -5,6 +5,48 @@ import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import { Menu, X, Shield, Users, Plane, Calendar, MapPin, Search, CheckCircle2, Phone, Mail, Instagram, Twitter, Linkedin, Facebook, Star, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import eccImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_(1)_1781568586010.jpeg";
+import eccImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.46_PM_1781568586011.jpeg";
+import eccImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(4)_1781568586012.jpeg";
+import eccImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(3)_1781568586013.jpeg";
+import eccImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(2)_1781568586014.jpeg";
+import eccImg6 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_(1)_1781568586016.jpeg";
+import eccImg7 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.45_PM_1781568586017.jpeg";
+import eccImg8 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.33_PM_1781568586018.jpeg";
+import eccImg9 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(2)_1781568586019.jpeg";
+import eccImg10 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_(1)_1781568586020.jpeg";
+import eccImg11 from "@assets/WhatsApp_Image_2026-06-09_at_7.13.32_PM_1781568586020.jpeg";
+import epsImg1 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(2)_1781568740994.jpeg";
+import epsImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_(1)_1781568740995.jpeg";
+import epsImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.45_PM_1781568740996.jpeg";
+import epsImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(1)_1781568740997.jpeg";
+import epsImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.09.44_PM_(2)_1781568768260.jpeg";
+import vcpImg1 from "@assets/3ca5f3e5-e96e-42c0-bdd6-a5693036776b_1781569110198.jpg";
+import vcpImg2 from "@assets/WhatsApp_Image_2026-06-09_at_7.03.43_PM_1781569086389.jpeg";
+import vcpImg3 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(1)_1781569086387.jpeg";
+import vcpImg4 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_1781569086388.jpeg";
+import vcpImg5 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(2)_1781569086386.jpeg";
+import vcpImg6 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(3)_1781569086385.jpeg";
+import vcpImg7 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(4)_1781569086384.jpeg";
+import vcpImg8 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(5)_1781569086383.jpeg";
+import vcpImg9 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(6)_1781569086382.jpeg";
+import vcpImg10 from "@assets/WhatsApp_Image_2026-06-09_at_7.05.27_PM_(7)_1781569086381.jpeg";
+import vcpImg11 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.44_PM_1781569086380.jpeg";
+import vcpImg12 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(1)_1781569086378.jpeg";
+import vcpImg13 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_1781569086379.jpeg";
+import vcpImg14 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(2)_1781569086377.jpeg";
+import vcpImg15 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(3)_1781569086374.jpeg";
+import vcpImg16 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.45_PM_(4)_1781569086373.jpeg";
+import vcpImg17 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.46_PM_(1)_1781569086371.jpeg";
+import vcpImg18 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.46_PM_1781569086372.jpeg";
+import vcpImg19 from "@assets/WhatsApp_Image_2026-06-09_at_7.07.46_PM_(2)_1781569086370.jpeg";
+
+const eventSlides: { src: string; label: string }[] = [
+  ...[vcpImg1, vcpImg2, vcpImg3, vcpImg4, vcpImg5, vcpImg6, vcpImg7, vcpImg8, vcpImg9, vcpImg10, vcpImg11, vcpImg12, vcpImg13, vcpImg14, vcpImg15, vcpImg16, vcpImg17, vcpImg18, vcpImg19].map(src => ({ src, label: "VIP Close Protection" })),
+  ...[eccImg1, eccImg2, eccImg3, eccImg4, eccImg5, eccImg6, eccImg7, eccImg8, eccImg9, eccImg10, eccImg11].map(src => ({ src, label: "Event and Crowd Control" })),
+  ...[epsImg1, epsImg2, epsImg3, epsImg4, epsImg5].map(src => ({ src, label: "Escort and Protocol Services" })),
+];
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -31,6 +73,7 @@ const CountUp = ({ end, duration = 2, label }: { end: number, duration?: number,
       }, 1000 / 60);
       return () => clearInterval(timer);
     }
+    return undefined;
   }, [end, duration, isInView]);
 
   return (
@@ -518,52 +561,20 @@ export default function LandingPage() {
             autoplay={{ delay: 4000, disableOnInteraction: true, pauseOnMouseEnter: true }}
             className="events-swiper"
           >
-            {[
-              { img: "WA0068", title: "Presidential Escort", loc: "Abuja, Nigeria" },
-              { img: "WA0069", title: "Corporate Summit", loc: "Lagos, Nigeria" },
-              { img: "WA0070", title: "Diplomatic Transfer", loc: "Nnamdi Azikiwe Airport" },
-              { img: "WA0071", title: "Executive Retreat", loc: "Port Harcourt, Nigeria" },
-              { img: "WA0072", title: "Gala Security", loc: "International Event" },
-              { img: "WA0073", title: "VIP Convoy", loc: "Abuja CBD" },
-              { img: "WA0074", title: "High-Asset Protection", loc: "Classified" },
-              { img: "WA0075", title: "Asset Transfer", loc: "Abuja, Nigeria" },
-              { img: "WA0076", title: "Close Protection Detail", loc: "Lagos, Nigeria" },
-              { img: "WA0077", title: "Executive Arrival", loc: "Murtala Muhammed Airport" },
-              { img: "WA0078", title: "Diplomatic Security", loc: "Abuja, Nigeria" },
-              { img: "WA0079", title: "Corporate Protection", loc: "Victoria Island, Lagos" },
-              { img: "WA0080", title: "VIP Conference Security", loc: "Abuja, Nigeria" },
-              { img: "WA0081", title: "Secure Motorcade", loc: "Abuja, Nigeria" },
-              { img: "WA0082", title: "Event Perimeter Control", loc: "Lagos, Nigeria" },
-              { img: "WA0083", title: "High-Value Escort", loc: "Port Harcourt, Nigeria" },
-              { img: "WA0084", title: "Night Operations", loc: "Classified" },
-              { img: "WA0085", title: "Summit Security Detail", loc: "Abuja, Nigeria" },
-              { img: "WA0086", title: "VIP Ground Transport", loc: "Kano, Nigeria" },
-              { img: "WA0087", title: "Private Delegation Escort", loc: "Abuja, Nigeria" },
-              { img: "WA0088", title: "Advance Team Deployment", loc: "Lagos, Nigeria" },
-              { img: "WA0089", title: "Secure Asset Movement", loc: "Abuja, Nigeria" },
-              { img: "WA0090", title: "Corporate Gala Coverage", loc: "Eko Hotel, Lagos" },
-              { img: "WA0091", title: "Executive Site Inspection", loc: "Abuja, Nigeria" },
-              { img: "WA0092", title: "Close-Quarter Protection", loc: "Port Harcourt, Nigeria" },
-              { img: "WA0094", title: "Residential Security Ops", loc: "Abuja, Nigeria" },
-              { img: "WA0095", title: "Tactical Team Briefing", loc: "Classified" },
-              { img: "WA0096", title: "VIP Arrival Protocol", loc: "Nnamdi Azikiwe Airport" },
-              { img: "WA0097", title: "Night Escort Operation", loc: "Lagos, Nigeria" },
-              { img: "WA0098", title: "Full Detail Deployment", loc: "Abuja, Nigeria" },
-            ].map((event, i) => (
+            {eventSlides.map((slide, i) => (
               <SwiperSlide key={i} className="group cursor-pointer">
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07152B] via-transparent to-transparent z-10" />
-                  <img 
-                    src={`/images/events/IMG-20260525-${event.img}.jpg`} 
-                    alt={event.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" 
+                  <img
+                    src={slide.src}
+                    alt={slide.label}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex items-center gap-2 text-[#0D4CFF] text-xs font-bold uppercase tracking-widest mb-2">
-                      <MapPin size={14} /> {event.loc}
-                    </div>
-                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{event.title}</h4>
+                    <h4 className="text-xl font-heading font-bold uppercase text-white mb-4">{slide.label}</h4>
                     <Button variant="outline" size="sm" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Details
                     </Button>
